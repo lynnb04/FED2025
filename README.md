@@ -41,7 +41,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  ![homepage_ns](https://github.com/user-attachments/assets/f558e503-663a-4e99-a545-23cd017da9bb)
+
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Bestel treinkaartje  
