@@ -45,7 +45,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Bestel treinkaartje  
-  <img src=" https://github.com/user-attachments/assets/e535f66e-ebd8-4331-ae07-1d5f1aa98ae6" width="375px" alt="de pagina waar je een kaartje bestelt">
+  <img src="https://github.com/user-attachments/assets/e535f66e-ebd8-4331-ae07-1d5f1aa98ae6" width="375px" alt="de pagina waar je een kaartje bestelt">
  
 </details>
 
