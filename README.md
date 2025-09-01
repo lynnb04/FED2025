@@ -41,12 +41,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina  
-  ![homepage_ns](https://github.com/user-attachments/assets/f558e503-663a-4e99-a545-23cd017da9bb)
+  ![homepage_ns](https://github.com/user-attachments/assets/f558e503-663a-4e99-a545-23cd017da9bb "width=375")
 
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Bestel treinkaartje  
-  ![kaartjekopen_ns](https://github.com/user-attachments/assets/e535f66e-ebd8-4331-ae07-1d5f1aa98ae6)
+  ![kaartjekopen_ns](https://github.com/user-attachments/assets/e535f66e-ebd8-4331-ae07-1d5f1aa98ae6 "width=375")
 
  
 </details>
