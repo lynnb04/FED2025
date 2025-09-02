@@ -44,7 +44,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   2e pagina kiezen
-  <img src="" width="375px" alt="de pagina waar je een kaartje bestelt">
+  <img src="" width="375px" alt="de 2e pagina">
  
 </details>
 
