@@ -36,16 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  Website van NS
-  https://www.ns.nl/
+  Sostrene Grene
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina  
-  <img src="https://github.com/user-attachments/assets/f558e503-663a-4e99-a545-23cd017da9bb" width="375" alt="de homepagina">
+  <img src="" width="375" alt="de homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Bestel treinkaartje  
-  <img src="https://github.com/user-attachments/assets/e535f66e-ebd8-4331-ae07-1d5f1aa98ae6" width="375px" alt="de pagina waar je een kaartje bestelt">
+  2e pagina kiezen
+  <img src="" width="375px" alt="de pagina waar je een kaartje bestelt">
  
 </details>
 
