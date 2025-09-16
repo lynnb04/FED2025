@@ -40,11 +40,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina  
-  <img src="https://github.com/user-attachments/assets/6345a42c-79ff-4eca-84f8-65f7cc721289" width="375" alt="homepagina">
+  <img src="https://github.com/user-attachments/assets/51588205-c253-4e88-bbc6-565f57e9a5fd" width="375" alt="homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Inspiratie pagina  
-  <img src="https://github.com/user-attachments/assets/3a2b743f-ae0d-4b94-aa5f-8f0652d2278b" width="375px" alt="inspiratie">
+  Productpagina   
+  <img src="https://github.com/user-attachments/assets/f416d943-5987-4752-ba46-71ab6f03344e" width="375px" alt="inspiratie">
+
 
 
 </details>
