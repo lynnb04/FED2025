@@ -81,13 +81,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
  - Navigation landmark duidelijk behalve dat de titels geen heading elements hebben
  - Tekening heeft geen beschrijving
 
-  samenvatting:
- - afbeeldingen moeten vervangende tekst
- - headings fixen
- - nav bar gebruiksvriendelijker maken
- - volgorde van de pagina voorlezen fixen
- - alle cards en categorieën fixen
- - geen space space in alineas
+  Samenvatting:
+ - Afbeeldingen moeten vervangende tekst
+ - Headings fixen
+ - Nav bar gebruiksvriendelijker maken
+ - Volgorde van de pagina voorlezen fixen
+ - Alle cards en categorieën fixen
+ - Geen space space in alineas
 
 </details>
 
