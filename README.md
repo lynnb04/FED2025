@@ -55,9 +55,38 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
+[FED 25-26 - Blok 1 - WCAG checklist.pdf](https://github.com/user-attachments/files/22358929/FED.25-26.-.Blok.1.-.WCAG.checklist.pdf)
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  
+ - Navigatiebalk is duidelijk, bij alles leest hij link + titel voor
+ - Na nav bar gelijk door naar de call to action button, logisch
+ - De titels van de links zijn heel lang en het laatste woord wordt twee keer gezegd, onnodig
+ - Leest de afmetingen van de groep veel te vaak voor
+ - Nav bar incoontjes moet je 3x op tikken voordat er wordt gezegd wat het is
+ - Gaat opeens een heel stuk naar beneden op de pagina
+ - Dan weer helemaal omhoog voor de titel/call to action
+ - Leest decoraties op knoppen voor
+ - Categorieen hebben veel te lange teksten en worden dubbel voorgelezen
+ - Winkelwagen is niet 1 maar 2 icoontjes
+ - Je kan niet makkelijk verder scrollen in dat menu naar nieuwe product cards
+ - Geen goede vervangende tekst bij afbeeldingen
+ - Het pompoenstukje staat onlogischs, hij leest de product card op voor de titel
+ - "Space space" tussen elke regel in de alinea
+ - "Krijg inspiratie op instagram" heeft alleen maar ongelabelde afbeeldingen
+ - Ontvang onze nieuwsbrief deel wel logisch, behalve afbeelding voor vinkbox
+ - De punt oplezen na privacybeleid is nogal onnodig
+ - Navigation landmark duidelijk behalve dat de titels geen heading elements hebben
+ - Tekening heeft geen beschrijving
+
+  samenvatting:
+ - afbeeldingen moeten vervangende tekst
+ - headings fixen
+ - nav bar gebruiksvriendelijker maken
+ - volgorde van de pagina voorlezen fixen
+ - alle cards en categorieën fixen
+ - geen space space in alineas
 
 </details>
 
