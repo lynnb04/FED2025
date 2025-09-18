@@ -32,32 +32,62 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Je website
 
-<details open>
+<details>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  Website van NS
-  https://www.ns.nl/
+  Sostrene Grene: https://sostrenegrene.com/nl
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="https://github.com/user-attachments/assets/51588205-c253-4e88-bbc6-565f57e9a5fd" width="375" alt="homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Bestel treinkaartje  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
- 
+  Productpagina   
+  <img src="https://github.com/user-attachments/assets/f416d943-5987-4752-ba46-71ab6f03344e" width="375px" alt="inspiratie">
+
+
+
 </details>
 
 
 
 ## Toegankelijkheidstest 1/2 (week 1)
 
-<details>
+<details open>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
+[FED 25-26 - Blok 1 - WCAG checklist.pdf](https://github.com/user-attachments/files/22358929/FED.25-26.-.Blok.1.-.WCAG.checklist.pdf)
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  
+ - Navigatiebalk is duidelijk, bij alles leest hij link + titel voor
+ - Na nav bar gelijk door naar de call to action button, logisch
+ - De titels van de links zijn heel lang en het laatste woord wordt twee keer gezegd, onnodig
+ - Leest de afmetingen van de groep veel te vaak voor
+ - Nav bar incoontjes moet je 3x op tikken voordat er wordt gezegd wat het is
+ - Gaat opeens een heel stuk naar beneden op de pagina
+ - Dan weer helemaal omhoog voor de titel/call to action
+ - Leest decoraties op knoppen voor
+ - Categorieen hebben veel te lange teksten en worden dubbel voorgelezen
+ - Winkelwagen is niet 1 maar 2 icoontjes
+ - Je kan niet makkelijk verder scrollen in dat menu naar nieuwe product cards
+ - Geen goede vervangende tekst bij afbeeldingen
+ - Het pompoenstukje staat onlogischs, hij leest de product card op voor de titel
+ - "Space space" tussen elke regel in de alinea
+ - "Krijg inspiratie op instagram" heeft alleen maar ongelabelde afbeeldingen
+ - Ontvang onze nieuwsbrief deel wel logisch, behalve afbeelding voor vinkbox
+ - De punt oplezen na privacybeleid is nogal onnodig
+ - Navigation landmark duidelijk behalve dat de titels geen heading elements hebben
+ - Tekening heeft geen beschrijving
+
+  Samenvatting:
+ - Afbeeldingen moeten vervangende tekst
+ - Headings fixen
+ - Nav bar gebruiksvriendelijker maken
+ - Volgorde van de pagina voorlezen fixen
+ - Alle cards en categorieën fixen
+ - Geen space space in alineas
 
 </details>
 
