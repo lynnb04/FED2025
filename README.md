@@ -119,7 +119,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  Het meerendeel van de pagina is vrij makkelijk in te delen in elementen, ik loop alleen vast bij de korte stukjes tekst die boven de H1's staan. Het lijkt me niet dat dat ook headings zijn, want er staat geen paragraaf onder maar wat is het dan wel? Online heb ik het <small> element gevonden maar ik weet niet zeker of dat hierbij past.
+  Het meerendeel van de pagina is vrij makkelijk in te delen in elementen, ik loop alleen vast bij de korte stukjes tekst die boven de H1's staan. Het lijkt me niet dat dat ook headings zijn, want er staat geen paragraaf onder maar wat is het dan wel? Online heb ik het small element gevonden maar ik weet niet zeker of dat hierbij past.
   
 
   ### Agenda voor meeting
