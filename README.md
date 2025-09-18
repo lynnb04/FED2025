@@ -99,7 +99,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  Link naar mijn breakdownschets: https://www.figma.com/design/6YSGkkIzKDlvcGJbcXbe9Z/Untitled?node-id=0-1&t=Mifgq6CwaZ34clkN-1
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
