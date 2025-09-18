@@ -99,7 +99,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  Link naar mijn breakdownschets: https://www.figma.com/design/6YSGkkIzKDlvcGJbcXbe9Z/Untitled?node-id=0-1&t=Mifgq6CwaZ34clkN-1
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
@@ -119,17 +119,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Het meerendeel van de pagina is vrij makkelijk in te delen in elementen, ik loop alleen vast bij de korte stukjes tekst die boven de H1's staan. Het lijkt me niet dat dat ook headings zijn, want er staat geen paragraaf onder maar wat is het dan wel? Online heb ik het small element gevonden maar ik weet niet zeker of dat hierbij past.
+  
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Lynn           | Nina               | Beyza        | Zara             |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | welke elementen krijgen stukjes tekst die bij een heading horen maar anders zijn opgemaakt?  | structuur van navigatie | moeilijk om wcag checklist volledig in te vullen | ...              |
 
 
   ### Verslag van meeting
