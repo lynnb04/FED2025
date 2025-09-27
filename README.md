@@ -133,10 +133,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - hidden h1
+  - elke kop een h2, kopjes die daar onder vallen h3, enz
+  - decoratie img in css
+  - svg wel in html
+  - visually hidden voor "lees meer (over dit)"
+  - nav's hoeven niet per se in een section
+  - img/svg vinden met inspect tool
 
 </details>
 
