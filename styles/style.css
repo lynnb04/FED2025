@@ -8,7 +8,8 @@ body {
 } =hidden, maakt niet uit? */
 
 h2 {
-    brandon-grotesque, sans-serif;
+    font-family: "HvDTrial Brandon Grotesque Reg", sans-serif;
+    text-align: center;
 }
 
 h3 {
