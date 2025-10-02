@@ -1,0 +1,80 @@
+/* Global */
+body {
+    background:#fffef9;
+}
+
+/* h1 {
+    ...
+} =hidden, maakt niet uit? */
+
+h2 {
+    brandon-grotesque, sans-serif;
+}
+
+h3 {
+    canada-type-gibson, sans;
+}
+
+p accenten {
+    serendipity, sans-serif;
+}
+
+p alinea {
+    canada-type-gibson, sans;
+}
+
+button {
+    brandon-grotesque, sans-serif;
+}
+
+/* Hamburgermenu button klassikale oefening uit werkgroep 4 */
+button[aria-label="toggle menu"] {
+  appearance:none;
+  font-size:1em;
+  width:3em;
+  aspect-ratio:1;
+  border:none;
+  background:#fffef9;
+  display:grid;
+  justify-content:center;
+  align-content:center;
+}
+
+button[aria-label="toggle menu"] span {
+  display:block;
+  width:1.5em;
+  height:.2em;
+  background-color:#504239;
+  border-radius:.1em;
+  grid-column-start:1;
+  grid-row-start:1;
+  transition:.3s;
+}
+
+button[aria-label="toggle menu"] span:nth-of-type(1) {
+  translate:0 -.5em;
+}
+
+/* button[aria-label="toggle menu"] span:nth-of-type(2) {
+  do not use empty rulesets
+} */
+
+button[aria-label="toggle menu"] span:nth-of-type(3) {
+  translate:0 .5em;
+}
+
+
+
+button[aria-label="toggle menu"].is-open span:nth-of-type(1) {
+  translate:0 0;
+  rotate:45deg;
+}
+
+button[aria-label="toggle menu"].is-open span:nth-of-type(2) {
+  scale:0 1;
+}
+
+button[aria-label="toggle menu"].is-open span:nth-of-type(3) {
+  translate:0 0;
+  rotate:-45deg;
+}
