@@ -5,38 +5,27 @@ body {
 
 /* h1 {
     ...
-} =hidden, maakt niet uit? */
-
-
-
-
-@font-face {
-  font-family: 'HvDTrial Brandon Grotesque';
-  src: url('./fonts/HvDTrial_Brandon_Grotesque_regular-BF64a625c9311e1.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
+} =hidden, maakt niet uit */
 
 h2 {
-    font-family: "HvDTrialBrandon", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-align: center;
 }
 
 h3 {
-    canada-type-gibson, sans
+    font-family: "Noto Sans", sans-serif;
 }
 
-p accenten {
-    serendipity, sans-serif
+p accent {
+    font-family: "Dancing Script", cursive;
 }
 
-p alinea {
-    canada-type-gibson, sans
+p {
+    font-family: "Noto Sans", sans-serif;
 }
 
 button {
-    brandon-grotesque, sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* Hamburgermenu button klassikale oefening uit werkgroep 4 */
