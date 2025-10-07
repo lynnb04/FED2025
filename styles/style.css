@@ -7,21 +7,32 @@ body {
     ...
 } =hidden, maakt niet uit? */
 
+
+
+
+@font-face {
+  font-family: 'HvDTrial Brandon Grotesque';
+  src: url('./fonts/HvDTrial_Brandon_Grotesque_regular-BF64a625c9311e1.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 h2 {
-    font-family: "HvDTrial Brandon Grotesque Reg", sans-serif;
+    font-family: "HvDTrialBrandon", sans-serif;
     text-align: center;
 }
 
 h3 {
-    canada-type-gibson, sans;
+    canada-type-gibson, sans
 }
 
 p accenten {
-    serendipity, sans-serif;
+    serendipity, sans-serif
 }
 
 p alinea {
-    canada-type-gibson, sans;
+    canada-type-gibson, sans
 }
 
 button {
