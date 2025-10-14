@@ -1,7 +1,26 @@
-/* Global */
-body {
-  background:#fffef9;
+/* Custom properties */
+/* ///////////////// */
+
+:root {
+  --text-color: #504239;
+  --text-color2: #fffef9;
+  --background-color: #fffef9;
 }
+
+
+/* Global */
+/* ////// */
+
+body {
+  background-color: var(--background-color);
+  color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Fonts, tekst deco */
+/* ///// */
 
 /* h1 {
     ...
@@ -15,10 +34,6 @@ h2 {
 
 h3 {
   font-family: "Noto Sans", sans-serif;
-}
-
-p accent {
-  font-family: "Dancing Script", cursive;
 }
 
 p {
@@ -38,8 +53,22 @@ label {
   font-size: small;
 }
 
+#landing p:first-of-type {
+  font-family: "Dancing Script", cursive;
+}
 
-/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+#vind-inspiratie p:first-of-type {
+  font-family: "Dancing Script", cursive;
+}
+
+h2, h3, p, button, label {
+  color: var(--text-color);
+}
+
+
+/* Visually hidden */
+/* /////////////// */
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -49,26 +78,27 @@ label {
   white-space: nowrap;
   width: 1px;
 }
+/* Bron = https://www.a11yproject.com/posts/how-to-hide-content/ */
 
 
+/* Hamburgermenu */
 
-/* Hamburgermenu button klassikale oefening uit werkgroep 4 */
 button[aria-label="toggle menu"] {
   appearance:none;
   font-size:1em;
-  width:3em;
+  width:1em;
   aspect-ratio:1;
   border:none;
   background:#fffef9;
   display:grid;
-  justify-content:center;
   align-content:center;
+  scale: 0.9;
 }
 
 button[aria-label="toggle menu"] span {
   display:block;
-  width:1.5em;
-  height:.2em;
+  width:1.2em;
+  height:.1em;
   background-color:#504239;
   border-radius:.1em;
   grid-column-start:1;
@@ -88,8 +118,6 @@ button[aria-label="toggle menu"] span:nth-of-type(3) {
   translate:0 .5em;
 }
 
-
-
 button[aria-label="toggle menu"].is-open span:nth-of-type(1) {
   translate:0 0;
   rotate:45deg;
@@ -103,3 +131,80 @@ button[aria-label="toggle menu"].is-open span:nth-of-type(3) {
   translate:0 0;
   rotate:-45deg;
 }
+/* Bron = hamburgermenu button klassikale oefening werkgroep 4 */
+
+
+/* Nav bar */
+/* /////// */
+
+nav ul {
+  display:flex;
+  gap:1em;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  margin: 1em;
+  }
+
+nav ul li:nth-child(2) {
+  margin-right: auto;
+}
+
+nav button[aria-label="toggle menu"] {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav ul li svg {
+  scale: 0.9;
+}
+
+
+/* Section 1 landing */
+/* ///////////////// */
+
+#landing {
+  background: url('https://assets.sostrenegrene.com/cdn-cgi/image/height=700,width=500,quality=70,format=webp,fit=cover,gravity=0.5x0.5/media/wtbf4ma2/websize_hero_sostrene-grene_christmas-2542c_162.jpg')
+              center / cover no-repeat;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+h2:first-of-type {
+  color: var(--text-color2);
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+#landing p:first-of-type {
+  order:1;
+  color: var(--text-color2);
+  font-size: 3rem;
+  margin: 0;
+  transform: rotate(-5deg);
+}
+
+#landing h2 {
+  order:2;
+  margin: 0;
+}
+
+#landing a {
+  order:3;
+  margin-top:5em;
+  text-decoration: none;
+  background-color: var(--text-color);
+  padding: 1em 1em;
+  border-radius: 1px;
+  font-weight:500;
+  color: var(--text-color2);
+  text-transform: uppercase;
+}
+
