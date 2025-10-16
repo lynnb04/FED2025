@@ -304,8 +304,6 @@ nav ul li svg {
   max-width: 250px;
   min-width:180px;
   height: auto;
-
-  
 }
 
 #trending img {
@@ -350,6 +348,13 @@ order:2;
   text-transform: uppercase;
   width: fit-content;
   text-align: center;
+}
+
+
+/* Section 5 artikels */
+
+#artikels img {
+  width: 100px; /*even tijdelijk*/
 }
 
 
