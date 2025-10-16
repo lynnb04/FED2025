@@ -290,8 +290,28 @@ nav ul li svg {
   margin-top: 2.5em;
   text-align: left;
   margin-left: 1em;
+  order: 2;
 }
 
+#trending ul {
+  display: flex;
+  gap: 20px;
+  padding: 1em;
+}
+
+#trending li {
+  width: 25vw;
+  max-width: 250px;
+  min-width:180px;
+  height: auto;
+
+  
+}
+
+#trending img {
+  width: 100%;
+  order: 1;
+}
 
 /* Section 4 vind inspiratie */
 /* ///////////////////////// */
@@ -317,4 +337,24 @@ order:2;
   flex-direction: column;
   padding: 1rem;
   position: relative;
+}
+
+#vind-inspiratie a {
+  order: 4;
+  text-decoration: none;
+  padding: 0.7em 1em;
+  border-radius: 2px;
+  border: 1px solid var(--text-color);
+  font-weight:500;
+  color: var(--text-color);
+  text-transform: uppercase;
+  width: fit-content;
+  text-align: center;
+}
+
+
+/* footer nav */
+
+#footer-nav {
+  background-color: var(--text-color);
 }
