@@ -143,11 +143,12 @@ nav ul {
   align-items: center;
   justify-content: flex-end;
   position: relative;
-  margin: 1em;
+  margin: 0.7em;
   }
 
 nav ul li:nth-child(2) {
   margin-right: auto;
+  margin-top: 0.5em;
 }
 
 nav button[aria-label="toggle menu"] {
@@ -177,34 +178,111 @@ nav ul li svg {
   position: relative;
 }
 
-h2:first-of-type {
+#landing h2 {
   color: var(--text-color2);
   font-size: 4rem;
   font-weight: 500;
+  order:2;
+  margin-top: 0;
 }
 
 #landing p:first-of-type {
   order:1;
   color: var(--text-color2);
   font-size: 3rem;
-  margin: 0;
   transform: rotate(-5deg);
-}
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
 
-#landing h2 {
-  order:2;
-  margin: 0;
 }
 
 #landing a {
   order:3;
-  margin-top:5em;
+  margin-top:4em;
+  margin-bottom: 2em;
   text-decoration: none;
-  background-color: var(--text-color);
-  padding: 1em 1em;
-  border-radius: 1px;
+  background-color: var(--text-color2);
+  padding: 0.7em 1em;
+  border-radius: 2px;
   font-weight:500;
-  color: var(--text-color2);
+  color: var(--text-color);
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
 }
 
+#landing a::after {
+  background-image: url('../glitter-2-svgrepo-com.svg');
+  background-size: contain;
+  content: "";
+  width: 2em;
+  height: 2em;
+  margin-left: 1em;
+}
+/* zelf icoontje gemaakt want die van de site werkte niet, bron: https://www.svgrepo.com/svg/477652/glitter-2 */
+
+
+/* Section 2 populair */
+/* ////////////////// */
+
+#populair h2 {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 2.5em;
+}
+
+#populair p {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+#populair a {
+  text-decoration: none;
+}
+
+#populair ul {
+  margin-top: 3em;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(3, minmax(120px, 10px));
+
+}
+
+#populair li {
+  display: flex;
+  text-align: center;
+}
+
+/* schalen naast elkaar op grote schermen */
+@media (min-width: 768px) {
+  #populair ul {
+    grid-template-columns: repeat(4,120px);
+  }
+}
+
+@media (min-width: 1024px) {
+  #populair ul {
+    grid-template-columns: repeat(5,120px);
+  }
+}
+
+@media (min-width: 1280px) {
+  #populair ul {
+    grid-template-columns: repeat(6,120px);
+  }
+}
+
+
+/* Section 3 trending */
+/* ////////////////// */
+
+#trending h2 {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 2.5em;
+  text-align: left;
+  margin-left: 1em;
+}
