@@ -5,7 +5,10 @@
   --text-color: #504239;
   --text-color2: #fffef9;
   --background-color: #fffef9;
+  --accent1: #faf7f1;
+  --accent2: #f2eee2;
 }
+
 
 
 /* Global */
@@ -19,8 +22,9 @@ body {
 }
 
 
+
 /* Fonts, tekst deco */
-/* ///// */
+/* ///////////////// */
 
 /* h1 {
     ...
@@ -53,17 +57,18 @@ label {
   font-size: small;
 }
 
-#landing p:first-of-type {
+main section:first-of-type p:first-of-type {
   font-family: "Dancing Script", cursive;
 }
 
-#vind-inspiratie p:first-of-type {
+main section:nth-of-type(4) p:first-of-type {
   font-family: "Dancing Script", cursive;
 }
 
 h2, h3, p, button, label {
   color: var(--text-color);
 }
+
 
 
 /* Visually hidden */
@@ -134,8 +139,13 @@ button[aria-label="toggle menu"].is-open span:nth-of-type(3) {
 /* Bron = hamburgermenu button klassikale oefening werkgroep 4 */
 
 
+
 /* Nav bar */
 /* /////// */
+
+svg {
+  fill: var(--text-color);
+}
 
 nav ul {
   display:flex;
@@ -163,11 +173,12 @@ nav ul li svg {
 }
 
 
+
 /* Section 1 landing */
 /* ///////////////// */
 
-#landing {
-  background: url('https://assets.sostrenegrene.com/cdn-cgi/image/height=700,width=500,quality=70,format=webp,fit=cover,gravity=0.5x0.5/media/wtbf4ma2/websize_hero_sostrene-grene_christmas-2542c_162.jpg')
+main section:first-of-type {
+  background: url('https://assets.sostrenegrene.com/cdn-cgi/image/height=700,width=500,quality=100,format=webp,fit=cover,gravity=0.5x0.5/media/poqcxasp/websize_hero_sostrene-grene_christmas-2542c_021.jpg')
               center / cover no-repeat;
   min-height: 75vh;
   display: flex;
@@ -178,7 +189,7 @@ nav ul li svg {
   position: relative;
 }
 
-#landing h2 {
+main section:first-of-type h2 {
   color: var(--text-color2);
   font-size: 4rem;
   font-weight: 500;
@@ -186,17 +197,16 @@ nav ul li svg {
   margin-top: 0;
 }
 
-#landing p:first-of-type {
+main section:first-of-type p:first-of-type {
   order:1;
   color: var(--text-color2);
   font-size: 3rem;
   transform: rotate(-5deg);
   margin-bottom: 0.5em;
   margin-top: 1.5em;
-
 }
 
-#landing a {
+main section:first-of-type a {
   order:3;
   margin-top:4em;
   margin-bottom: 2em;
@@ -205,13 +215,15 @@ nav ul li svg {
   padding: 0.7em 1em;
   border-radius: 2px;
   font-weight:500;
+  font-size: 0.9em;
   color: var(--text-color);
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-#landing a::after {
+main section:first-of-type a::after {
   background-image: url('../glitter-2-svgrepo-com.svg');
   background-size: contain;
   content: "";
@@ -221,69 +233,86 @@ nav ul li svg {
 }
 /* zelf icoontje gemaakt want die van de site werkte niet, bron: https://www.svgrepo.com/svg/477652/glitter-2 */
 
+main section:first-of-type a:hover {
+  transform: scale(1.1);
+}
+
+
 
 /* Section 2 populair */
 /* ////////////////// */
 
-#populair {
+main section:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#populair h2 {
+main section:nth-of-type(2) h2 {
   color: var(--text-color);
   font-size: 1.2rem;
   font-weight: 400;
   margin-top: 2.5em;
 }
 
-#populair p {
+main section:nth-of-type(2) p {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
 
-#populair a {
+main section:nth-of-type(2) a {
   text-decoration: none;
 }
 
-#populair ul {
+main section:nth-of-type(2) ul {
   margin-top: 1em;
   display: grid;
-  gap: 0;
+  gap: 0.5em;
   grid-template-columns: repeat(3, minmax(120px, 10px));
 }
 
-#populair li {
+main section:nth-of-type(2) li {
   display: flex;
   text-align: center;
 }
 
+main section:nth-of-type(2) img {
+  background-color: var(--accent1);
+  border-radius: 50%;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+main section:nth-of-type(2) img:hover {
+  transform: scale(1.1);
+}
+
 /* schalen naast elkaar op grote schermen */
 @media (min-width: 768px) {
-  #populair ul {
+  main section:nth-of-type(2) ul {
     grid-template-columns: repeat(4,120px);
   }
 }
 
 @media (min-width: 1024px) {
-  #populair ul {
+  main section:nth-of-type(2) ul {
     grid-template-columns: repeat(5,120px);
   }
 }
 
 @media (min-width: 1280px) {
-  #populair ul {
+  main section:nth-of-type(2) ul {
     grid-template-columns: repeat(6,120px);
   }
 }
 
 
+
 /* Section 3 trending */
 /* ////////////////// */
 
-#trending h2 {
+main section:nth-of-type(3) h2 {
+  anchor-name: --heading;
   color: var(--text-color);
   font-size: 1rem;
   font-weight: 400;
@@ -293,52 +322,186 @@ nav ul li svg {
   order: 2;
 }
 
-#trending ul {
+main section:nth-of-type(3) ul {
   display: flex;
   gap: 20px;
   padding: 1em;
+
+  list-style-type:"";
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+	scroll-behavior:smooth;
+  overscroll-behavior-x:contain;
+  anchor-name: --carousel;
 }
 
-#trending li {
-  width: 25vw;
-  max-width: 250px;
-  min-width:180px;
-  height: auto;
+main section:nth-of-type(3) ul {
+  &::scroll-button(*) {
+    position: fixed;
+    position-anchor: --heading;
+    position-visibility: always;
+    		
+		margin-top:1em;
+		
+		height:2em;
+  }
+
+  &::scroll-button(right) {
+    position-area: center right;
+    content: '→' / 'Next';
+		
+		justify-self:end;
+    margin-right: 10px;
+  }
+
+  &::scroll-button(left) {
+    position-area: center right;
+    content: '←' / 'Previous';
+		
+		justify-self:start;
+    margin-right: 50px;
+  }
+}
+/* bron: carousel voortgangsgesprek 3, product cards ervan gemaakt */
+
+main section:nth-of-type(3) li {
+	width: 14.5em;
+	height: auto;
+	
+	flex-shrink: 0;
+	
+	scroll-snap-align: center;
 }
 
-#trending img {
+main section:nth-of-type(3) img {
   width: 100%;
   order: 1;
 }
 
+/* product cards */
+
+main section:nth-of-type(3) a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "img img"
+    "h3 h3"
+    "p button2";
+  text-decoration: none;
+  color: var(--text-color);
+  position: relative;
+  padding: 0.5em;
+  gap: 0;
+}
+
+main section:nth-of-type(3) a img {
+  grid-area: img;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+main section:nth-of-type(3) a h3 {
+  grid-area: h3;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 1em 0 0;
+}
+
+main section:nth-of-type(3) a p {
+  grid-area: p;
+  font-size: 0.7rem;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 350;
+  margin: 0;
+  align-self: center;
+}
+
+/* winkelmand button */
+
+main section:nth-of-type(3) a button:nth-of-type(2) {
+  grid-area: button2;
+  justify-self: end;
+  align-self: center;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 2px;
+  padding: 0.4em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+main section:nth-of-type(3) a button:nth-of-type(2):hover {
+  transform: scale(1.2);
+}
+
+/* like button */
+
+main section:nth-of-type(3) a button:first-of-type {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 2px;
+  padding-top: 0.8em;
+  padding-left: 0.8em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+main section:nth-of-type(3) a button:first-of-type:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(3) ul::-webkit-scrollbar {
+  display: none;
+}
+/* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
+
+
+
 /* Section 4 vind inspiratie */
 /* ///////////////////////// */
 
-#vind-inspiratie h2 {
+main section:nth-of-type(4) h2 {
 font-weight: 400;
 font-size: 1.5rem;
 text-align: left;
 order:2;
+margin-top:0;
 }
 
-#vind-inspiratie p:first-of-type {
+main section:nth-of-type(4) p:first-of-type {
   order:1;
   font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-#vind-inspiratie p:last-of-type {
-  order:3;
+main section:nth-of-type(4) p:last-of-type {
+  order:4;
 }
 
-#vind-inspiratie {
+main section:nth-of-type(4) {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   position: relative;
 }
 
-#vind-inspiratie a {
-  order: 4;
+main section:nth-of-type(4) img {
+  order: 3;
+  max-width: 700px;
+}
+
+main section:nth-of-type(4) a {
+  order: 5;
   text-decoration: none;
   padding: 0.7em 1em;
   border-radius: 2px;
@@ -348,18 +511,212 @@ order:2;
   text-transform: uppercase;
   width: fit-content;
   text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
+
+main section:nth-of-type(4) a:hover {
+  background-color: var(--text-color);
+  color: var(--text-color2);
+}
+
 
 
 /* Section 5 artikels */
+/* ////////////////// */
 
-#artikels img {
-  width: 100px; /*even tijdelijk*/
+main section:nth-of-type(5) img {
+  width: 20em;
+  margin: 1em;
+}
+
+main section:nth-of-type(5) {
+  background-color: var(--accent2);
+  padding: 1em 1.5em;
+  margin-top: 1em;
+}
+
+main section:nth-of-type(5) li {
+  list-style-type: none;
+}
+
+main section:nth-of-type(5) h2 {
+  text-align: start;
+  font-weight: 400;
+}
+
+main section:nth-of-type(5) h3 {
+  font-weight: 600;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 0;
+}
+
+main section:nth-of-type(5) p {
+  font-weight: 300;
+  font-size: 0.8em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 0;
+}
+
+main section:nth-of-type(5) ul {
+	margin:0;
+	padding:0;
+  gap: 2em;
+	list-style-type:"";
+	
+	display:flex;
+	overflow-x:auto;
+	
+	scroll-snap-type:x mandatory;
+	scroll-behavior:smooth;
+	
+	overscroll-behavior-x:contain;
+	
+	font-size:1em;
+	
+	anchor-name: --carousel;
+}
+
+main section:nth-of-type(5) ul {
+  &::scroll-button(*) {
+    position: fixed;
+    position-anchor: --carousel;
+    position-visibility: always;
+    		
+		margin-top:1em;
+		
+		height:2em;
+  }
+
+  &::scroll-button(right) {
+    position-area: top center;
+    content: '→' / 'Next';
+		
+		justify-self:end;
+  }
+
+  &::scroll-button(left) {
+    position-area: top center;
+    content: '←' / 'Previous';
+		
+		justify-self:start;
+  }
+}
+
+main section:nth-of-type(5) li {
+	width:22em;
+	height:auto;
+	background-color: var(--background-color);
+	
+	flex-shrink:0;
+	
+	scroll-snap-align:center;
+}
+/* bron: weer carousel uit voortgangsgesprek 3, aangepast */
+
+main section:nth-of-type(5) ul::-webkit-scrollbar {
+  display: none;
+}
+/* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
+
+
+
+/* Section 6 ontdek */
+/* //////////////// */
+
+main section:nth-of-type(6) ul {
+	margin:0;
+	padding:0;
+	list-style-type:"";
+	
+	display:flex;
+	overflow-x:auto;
+	
+	scroll-snap-type:x mandatory;
+	scroll-behavior:smooth;
+	
+	overscroll-behavior-x:contain;
+	
+	font-size:1em;
+	
+	anchor-name: --carousel;
+}
+
+main section:nth-of-type(6) ul {
+  &::scroll-button(*) {
+    position: fixed;
+    position-anchor: --carousel;
+    position-visibility: always;
+    font-family: "Material Symbols Outlined";
+		
+		margin-top:1em;
+		
+		height:2em;
+  }
+
+  &::scroll-button(right) {
+    position-area: bottom center;
+    content: '→' / 'Next';
+		
+		justify-self:end;
+  }
+
+  &::scroll-button(left) {
+    position-area: bottom center;
+    content: '←' / 'Previous';
+		
+		justify-self:start;
+  }
+}
+
+main section:nth-of-type(6) li {
+	width:16em;
+	height:12em;
+	background-image:linear-gradient(45deg,pink,lime);
+	
+	flex-shrink:0;
+	
+	scroll-snap-align:center;
 }
 
 
-/* footer nav */
+/* Section 7 instagram */
+/* /////////////////// */
 
-#footer-nav {
+
+
+/* Section 8 nieuwsbrief */
+/* ///////////////////// */
+
+
+
+/*    footer nav    */
+
+/* Section 1 linkjes nav*/
+/* //////////////////// */
+
+footer section:first-of-type h2, p {
+  color: var(--text-color);
+}
+
+footer section:first-of-type a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+
+/* Section 2 footer nav */
+/* //////////////////// */
+
+footer section:last-of-type {
   background-color: var(--text-color);
+}
+
+footer section:last-of-type h2 {
+  color: var(--text-color2);
+}
+
+footer section:last-of-type p {
+  color: var(--text-color2);
 }
