@@ -351,7 +351,7 @@ main section:nth-of-type(3) ul {
     content: '→' / 'Next';
 		
 		justify-self:end;
-    margin-right: 10px;
+    margin-right: 25px;
   }
 
   &::scroll-button(left) {
@@ -359,7 +359,7 @@ main section:nth-of-type(3) ul {
     content: '←' / 'Previous';
 		
 		justify-self:start;
-    margin-right: 50px;
+    margin-right: 65px;
   }
 }
 /* bron: carousel voortgangsgesprek 3, product cards ervan gemaakt */
@@ -537,11 +537,22 @@ main section:nth-of-type(5) {
 
 main section:nth-of-type(5) li {
   list-style-type: none;
+  position: relative;
+}
+
+main section:nth-of-type(5) li:nth-of-type(2) img {
+  margin-top: 2.55em;
+}
+
+main section:nth-of-type(5) li:nth-of-type(3) img {
+  margin-top: 1.4em;
 }
 
 main section:nth-of-type(5) h2 {
   text-align: start;
   font-weight: 400;
+  margin-right: 3em;
+  anchor-name: --heading2;
 }
 
 main section:nth-of-type(5) h3 {
@@ -574,14 +585,12 @@ main section:nth-of-type(5) ul {
 	overscroll-behavior-x:contain;
 	
 	font-size:1em;
-	
-	anchor-name: --carousel;
 }
 
 main section:nth-of-type(5) ul {
   &::scroll-button(*) {
     position: fixed;
-    position-anchor: --carousel;
+    position-anchor: --heading2;
     position-visibility: always;
     		
 		margin-top:1em;
@@ -590,19 +599,60 @@ main section:nth-of-type(5) ul {
   }
 
   &::scroll-button(right) {
-    position-area: top center;
+    position-area: center right;
     content: '→' / 'Next';
 		
 		justify-self:end;
+    margin-right: 25px;
+    margin-bottom:-1.3em;
   }
 
   &::scroll-button(left) {
-    position-area: top center;
+    position-area: center right;
     content: '←' / 'Previous';
 		
 		justify-self:start;
+    margin-right:65px;
+    margin-bottom:-1.3em;
   }
 }
+
+main section:nth-of-type(5) a {
+  text-decoration: none;
+  padding: 0.3em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  background-color: var(--text-color2);
+  position: absolute;
+  top: 21.3em;
+  right: 1.5em;
+  place-items: center;
+  color: var(--text-color);
+  border-radius: 2px;
+  font-size: 1.5em;
+}
+
+
+/* 
+main section:nth-of-type(5) a {
+  
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 2px;
+  padding-top: 0.8em;
+  padding-left: 0.8em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+main section:nth-of-type(5) a:hover {
+  background: #fff;
+  transform: scale(1.1);
+} */
+
+
+
+
 
 main section:nth-of-type(5) li {
 	width:22em;
@@ -656,17 +706,19 @@ main section:nth-of-type(6) ul {
   }
 
   &::scroll-button(right) {
-    position-area: bottom center;
+    position-area: center right;
     content: '→' / 'Next';
 		
 		justify-self:end;
+    margin-right: 10px;
   }
 
   &::scroll-button(left) {
-    position-area: bottom center;
+    position-area: center right;
     content: '←' / 'Previous';
 		
 		justify-self:start;
+    margin-right: 50px;
   }
 }
 
