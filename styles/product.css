@@ -1,0 +1,514 @@
+/* Custom properties */
+/* ///////////////// */
+
+:root {
+  --text-color: #504239;
+  --text-color2: #fffef9;
+  --background-color: #fffef9;
+  --accent1: #faf7f1;
+  --accent2: #f2eee2;
+}
+
+
+
+/* Global */
+/* ////// */
+
+body {
+  background-color: var(--background-color);
+  color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Fonts, tekst deco */
+/* ///////////////// */
+
+/* h1 {
+    ...
+} =hidden, maakt niet uit */
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Noto Sans", sans-serif;
+}
+
+p {
+  font-family: "Noto Sans", sans-serif;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  font-family: "Noto Sans", sans-serif;
+}
+
+label {
+  font-family: "Noto Sans", sans-serif;
+  font-size: small;
+}
+
+main section:first-of-type p:first-of-type {
+  font-family: "Dancing Script", cursive;
+}
+
+main section:nth-of-type(4) p:first-of-type {
+  font-family: "Dancing Script", cursive;
+}
+
+h2, h3, p, button, label {
+  color: var(--text-color);
+}
+
+
+
+/* Visually hidden */
+/* /////////////// */
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* Bron = https://www.a11yproject.com/posts/how-to-hide-content/ */
+
+
+/* Hamburgermenu */
+
+button[aria-label="toggle menu"] {
+  appearance:none;
+  font-size:1em;
+  width:1em;
+  aspect-ratio:1;
+  border:none;
+  background:#fffef9;
+  display:grid;
+  align-content:center;
+  scale: 0.9;
+}
+
+button[aria-label="toggle menu"] span {
+  display:block;
+  width:1.2em;
+  height:.1em;
+  background-color:#504239;
+  border-radius:.1em;
+  grid-column-start:1;
+  grid-row-start:1;
+  transition:.3s;
+}
+
+button[aria-label="toggle menu"] span:nth-of-type(1) {
+  translate:0 -.5em;
+}
+
+/* button[aria-label="toggle menu"] span:nth-of-type(2) {
+  do not use empty rulesets
+} */
+
+button[aria-label="toggle menu"] span:nth-of-type(3) {
+  translate:0 .5em;
+}
+
+button[aria-label="toggle menu"].is-open span:nth-of-type(1) {
+  translate:0 0;
+  rotate:45deg;
+}
+
+button[aria-label="toggle menu"].is-open span:nth-of-type(2) {
+  scale:0 1;
+}
+
+button[aria-label="toggle menu"].is-open span:nth-of-type(3) {
+  translate:0 0;
+  rotate:-45deg;
+}
+/* Bron = hamburgermenu button klassikale oefening werkgroep 4 */
+
+
+
+/* Nav bar */
+/* /////// */
+
+svg {
+  fill: var(--text-color);
+}
+
+nav ul {
+  display:flex;
+  gap:1em;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  margin: 0.7em;
+  }
+
+nav ul li:nth-child(2) {
+  margin-right: auto;
+  margin-top: 0.5em;
+}
+
+nav button[aria-label="toggle menu"] {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav ul li svg {
+  scale: 0.9;
+}
+
+
+/* Section 1 productinfo */
+/* ///////////////////// */
+
+
+
+/* Section 2 ook interessant voor u */
+/* //////////////////////////////// */
+
+main section:nth-of-type(2) h2 {
+  anchor-name: --heading;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 2.5em;
+  text-align: left;
+  margin-left: 1em;
+  order: 2;
+}
+
+main section:nth-of-type(2) ul {
+  display: flex;
+  gap: 20px;
+  padding: 1em;
+
+  list-style-type:"";
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+	scroll-behavior:smooth;
+  overscroll-behavior-x:contain;
+  anchor-name: --carousel;
+}
+
+main section:nth-of-type(2) ul {
+  &::scroll-button(*) {
+    position: fixed;
+    position-anchor: --heading;
+    position-visibility: always;
+    		
+		margin-top:1em;
+		
+		height:2em;
+  }
+
+  &::scroll-button(right) {
+    position-area: center right;
+    content: '→' / 'Next';
+		
+		justify-self:end;
+    margin-right: 25px;
+    background-color: var(--background-color);
+    border: none;
+    cursor: pointer;
+  }
+
+  &::scroll-button(left) {
+    position-area: center right;
+    content: '←' / 'Previous';
+		
+		justify-self:start;
+    margin-right: 65px;
+    background-color: var(--background-color);
+    border: none;
+    cursor: pointer;
+   }
+}
+/* bron: carousel voortgangsgesprek 3, product cards ervan gemaakt */
+
+main section:nth-of-type(2) li {
+	width: 14.5em;
+	height: auto;
+	
+	flex-shrink: 0;
+	
+	scroll-snap-align: center;
+}
+
+main section:nth-of-type(2) img {
+  width: 100%;
+  order: 1;
+}
+
+/* product cards */
+
+main section:nth-of-type(2) a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "img img"
+    "h3 h3"
+    "p button2";
+  text-decoration: none;
+  color: var(--text-color);
+  position: relative;
+  padding: 0.5em;
+  gap: 0;
+}
+
+main section:nth-of-type(2) a img {
+  grid-area: img;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+main section:nth-of-type(2) a h3 {
+  grid-area: h3;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 1em 0 0;
+}
+
+main section:nth-of-type(2) a p {
+  grid-area: p;
+  font-size: 0.7rem;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 350;
+  margin: 0;
+  align-self: center;
+}
+
+/* winkelmand button */
+
+main section:nth-of-type(2) a button:nth-of-type(2) {
+  grid-area: button2;
+  justify-self: end;
+  align-self: center;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 2px;
+  padding: 0.4em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+main section:nth-of-type(2) a button:nth-of-type(2):hover {
+  transform: scale(1.2);
+}
+
+/* like button */
+
+main section:nth-of-type(2) a button:first-of-type {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 2px;
+  padding-top: 0.8em;
+  padding-left: 0.8em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+main section:nth-of-type(2) a button:first-of-type:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(2) ul::-webkit-scrollbar {
+  display: none;
+}
+/* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
+
+
+
+/* Section 3 anderen kochten ook */
+/* ///////////////////////////// */
+main section:nth-of-type(3) h2 {
+  anchor-name: --heading;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 2.5em;
+  text-align: left;
+  margin-left: 1em;
+  order: 2;
+}
+
+main section:nth-of-type(3) ul {
+  display: flex;
+  gap: 20px;
+  padding: 1em;
+
+  list-style-type:"";
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+	scroll-behavior:smooth;
+  overscroll-behavior-x:contain;
+  anchor-name: --carousel;
+}
+
+main section:nth-of-type(3) ul {
+  &::scroll-button(*) {
+    position: fixed;
+    position-anchor: --heading;
+    position-visibility: always;
+    		
+		margin-top:1em;
+		
+		height:2em;
+  }
+
+  &::scroll-button(right) {
+    position-area: center right;
+    content: '→' / 'Next';
+		
+		justify-self:end;
+    margin-right: 25px;
+    background-color: var(--background-color);
+    border: none;
+    cursor: pointer;
+  }
+
+  &::scroll-button(left) {
+    position-area: center right;
+    content: '←' / 'Previous';
+		
+		justify-self:start;
+    margin-right: 65px;
+    background-color: var(--background-color);
+    border: none;
+    cursor: pointer;
+   }
+}
+/* bron: carousel voortgangsgesprek 3, product cards ervan gemaakt */
+
+main section:nth-of-type(3) li {
+	width: 14.5em;
+	height: auto;
+	
+	flex-shrink: 0;
+	
+	scroll-snap-align: center;
+}
+
+main section:nth-of-type(3) img {
+  width: 100%;
+  order: 1;
+}
+
+/* product cards */
+
+main section:nth-of-type(3) a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "img img"
+    "h3 h3"
+    "p button2";
+  text-decoration: none;
+  color: var(--text-color);
+  position: relative;
+  padding: 0.5em;
+  gap: 0;
+}
+
+main section:nth-of-type(3) a img {
+  grid-area: img;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+main section:nth-of-type(3) a h3 {
+  grid-area: h3;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 1em 0 0;
+}
+
+main section:nth-of-type(3) a p {
+  grid-area: p;
+  font-size: 0.7rem;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 350;
+  margin: 0;
+  align-self: center;
+}
+
+/* winkelmand button */
+
+main section:nth-of-type(3) a button:nth-of-type(2) {
+  grid-area: button2;
+  justify-self: end;
+  align-self: center;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 2px;
+  padding: 0.4em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+main section:nth-of-type(3) a button:nth-of-type(2):hover {
+  transform: scale(1.2);
+}
+
+/* like button */
+
+main section:nth-of-type(3) a button:first-of-type {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 2px;
+  padding-top: 0.8em;
+  padding-left: 0.8em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+main section:nth-of-type(3) a button:first-of-type:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(3) ul::-webkit-scrollbar {
+  display: none;
+}
+/* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
+
+
+
+/* Section 4 recent bekeken */
+/* //////////////////////// */
+
+
+
+/* Section 5 footer */
+/* //////////////// */
