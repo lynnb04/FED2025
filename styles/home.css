@@ -728,6 +728,11 @@ main section:nth-of-type(6) a {
   font-weight: 600;
   text-underline-offset: 3px;
   margin-bottom: 5em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+main section:nth-of-type(6) a:hover {
+  transform: scale(1.1);
 }
 
 main section:nth-of-type(6) h2 {
