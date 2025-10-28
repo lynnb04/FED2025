@@ -843,7 +843,7 @@ main section:nth-of-type(7) p {
 
 /*    footer nav    */
 
-/* Section 1 linkjes nav*/
+/* Section 1 linkjes nav*/                         /* DETAIL SUMMARY */
 /* //////////////////// */
 
 footer section:first-of-type h2 {
@@ -905,4 +905,5 @@ footer section:last-of-type h2 {
 
 footer section:last-of-type p {
   color: var(--text-color2);
+  text-align: center;
 }
