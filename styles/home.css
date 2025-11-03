@@ -98,6 +98,7 @@ button[aria-label="toggle menu"] {
   display:grid;
   align-content:center;
   scale: 0.9;
+  cursor: pointer;
 }
 
 button[aria-label="toggle menu"] span {
@@ -138,27 +139,59 @@ button[aria-label="toggle menu"].is-open span:nth-of-type(3) {
 }
 /* Bron = hamburgermenu button klassikale oefening werkgroep 4 */
 
+/* toggle menu */
+
+nav ul:nth-of-type(2) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 20em;
+  background: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 4rem 1rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 5;
+}
+
+header nav:has(ul:first-of-type button[aria-expanded="true"]) > ul:nth-of-type(2) {
+  transform: translateX(0);
+}
+
+nav ul:nth-of-type(2) li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
 
 
 /* Nav bar */
-/* /////// */
 
 svg {
   fill: var(--text-color);
 }
 
-nav ul {
+nav ul:first-of-type {
   display:flex;
   gap:1em;
   align-items: center;
   justify-content: flex-end;
   position: relative;
   margin: 0.7em;
+  z-index: 10;
   }
 
-nav ul li:nth-child(2) {
+nav ul:first-of-type li:nth-child(2) {
   margin-right: auto;
   margin-top: 0.5em;
+  margin-left: -1.5em;
 }
 
 nav button[aria-label="toggle menu"] {
@@ -168,8 +201,49 @@ nav button[aria-label="toggle menu"] {
   transform: translateY(-50%);
 }
 
-nav ul li svg {
+nav ul:first-of-type li svg {
   scale: 0.9;
+  margin-top: 0.1em;
+  cursor: pointer;
+}
+
+/* zoekbalk */
+
+input[type="search"] {
+	width:2em;
+	height: 2em;
+	transition:.5s;
+	background-color: var(--background-color);
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23504239' fill-rule='evenodd' clip-rule='evenodd' d='m10.795 9.984.013.007.045.05a1 1 0 0 0-.058-.057Zm-.038-.02.001-.003.005.002.018.011-.024-.01ZM4.942 1.522c.116-.017.232-.033.35-.042a6.55 6.55 0 0 1 .817-.002c.19.02.373.063.56.105.157.036.315.075.47.123.27.091.543.181.807.285.152.059.298.147.437.23.137.08.273.163.408.247a2.491 2.491 0 0 1 .5.43c.093.107.185.213.274.324.099.128.192.262.279.4.17.262.318.538.46.816.091.19.164.387.239.583.079.21.145.422.195.64.043.26.058.52.075.782.019.273.03.544.018.816-.055.394-.175.775-.301 1.152a3.742 3.742 0 0 1-.162.39 3.95 3.95 0 0 1-.23.397 8.13 8.13 0 0 1-.426.532c-.077.09-.149.182-.226.27a3.238 3.238 0 0 1-.245.252c-.107.082-.216.16-.329.233-.134.085-.264.178-.4.26-.261.154-.525.302-.798.436a7.798 7.798 0 0 1-.74.279c-.251.078-.51.135-.767.185a5.004 5.004 0 0 1-1.066.055 3.55 3.55 0 0 1-.811-.166 8.45 8.45 0 0 1-.602-.244 6.138 6.138 0 0 1-.617-.33c-.2-.133-.39-.28-.569-.44a7.764 7.764 0 0 1-.497-.502 5.676 5.676 0 0 1-.456-.608 9.89 9.89 0 0 1-.371-.635A4.185 4.185 0 0 1 .86 7.83a3.316 3.316 0 0 1-.056-.46 5.872 5.872 0 0 1 .005-.493 9.15 9.15 0 0 1 .349-1.694c.1-.27.215-.536.353-.793.154-.286.318-.564.497-.837.147-.206.299-.407.472-.597.165-.18.352-.344.539-.505a6.29 6.29 0 0 1 .536-.397c.196-.13.394-.257.605-.362a1.41 1.41 0 0 1 .186-.064l.595-.106Zm8.89 11.057c-.108-.1-.225-.19-.332-.29-.09-.083-.174-.173-.265-.256-.22-.203-.46-.385-.694-.576a15.91 15.91 0 0 1-.486-.409c-.136-.121-.265-.25-.4-.37l-.14-.127c-.096-.138-.26-.249-.39-.338-.057-.04-.112-.084-.169-.125a1.45 1.45 0 0 0-.133-.09.648.648 0 0 0-.05-.034l-.01-.008.05-.064c.158-.202.297-.418.418-.645.117-.225.198-.466.28-.704.142-.422.281-.847.311-1.291.03-.449-.025-.897-.046-1.345a3.923 3.923 0 0 0-.12-.749c-.053-.208-.133-.411-.21-.612l-.108-.282a4.127 4.127 0 0 0-.178-.378 12.19 12.19 0 0 0-.316-.579c-.104-.176-.207-.352-.322-.52a4.555 4.555 0 0 0-.393-.491 3.461 3.461 0 0 0-.51-.49 6.69 6.69 0 0 0-.622-.39c-.182-.105-.366-.213-.562-.294C8.227 1.035 8.004.98 7.79.91a7.016 7.016 0 0 0-.827-.22c-.15-.029-.3-.055-.448-.078a2.46 2.46 0 0 0-.392-.029 12.087 12.087 0 0 0-.662.033c-.196.019-.39.05-.582.093-.154.03-.31.06-.465.092-.19.04-.268.077-.446.155-.084.037-.186.08-.316.164-.056.028-.112.06-.166.093a7.934 7.934 0 0 0-1.145.826c-.164.14-.326.284-.473.441-.156.17-.3.35-.433.54a8.676 8.676 0 0 0-1 1.851 6.087 6.087 0 0 0-.219.739c-.115.48-.187.969-.212 1.462-.011.223.003.447.026.67.014.13.045.266.077.392.03.122.066.24.103.361.075.24.194.473.31.696a6.378 6.378 0 0 0 1.24 1.736 5.6 5.6 0 0 0 .538.483c.22.167.451.317.69.46.193.115.398.211.604.3.245.105.494.199.75.272.218.062.445.11.672.129.26.022.528.044.79.03 1.014-.058 2.01-.383 2.883-.877.207-.117.41-.237.607-.368.22-.144.442-.28.637-.456.068-.062.131-.127.194-.193.025.027.053.05.084.072a.73.73 0 0 0 .077.054c.064.052.123.114.187.164.058.045.114.091.17.136l.06.047c.043.034.076.062.135.09l.01.004c.231.205.452.421.69.62.18.149.362.3.55.44.12.089.242.178.355.275.117.1.228.208.34.313.134.126.264.253.399.378.195.179.528.143.699-.047a.474.474 0 0 0-.05-.675Z'%3E%3C/path%3E%3C/svg%3E");
+	background-size:1.3em 1.3em;
+	background-repeat:no-repeat;
+	background-position:.25em center;
+  border: none;
+  border-radius: 2px;
+  padding-left: 2em;
+  padding-right: 0;
+  cursor: pointer;
+}
+
+input:focus {
+	width:12em;
+  background-color: var(--accent2);
+  cursor:text;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  input[type="search"] {
+    width: 20em;
+    background-color: var(--accent2);
+  }
+}
+
+@media (min-width: 1200px) {
+  input[type="search"] {
+    width: 40em;
+    background-color: var(--accent2);
+  }
 }
 
 
@@ -470,6 +544,27 @@ main section:nth-of-type(3) ul::-webkit-scrollbar {
 }
 /* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
 
+@media (min-width: 1200px) {
+  main section:nth-of-type(3) h2 {
+    text-align: center;
+    margin: 3em auto 1em auto;
+  }
+
+  main section:nth-of-type(3) ul {
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  main section:nth-of-type(3) ul::scroll-button(left),
+  main section:nth-of-type(3) ul::scroll-button(right) {
+    display: none;
+  }
+
+  main section:nth-of-type(3) li {
+    width: 20em;
+  }
+}
+
 
 
 /* Section 4 vind inspiratie */
@@ -523,6 +618,34 @@ main section:nth-of-type(4) a {
 main section:nth-of-type(4) a:hover {
   background-color: var(--text-color);
   color: var(--text-color2);
+}
+
+@media (min-width: 800px) {
+  main section:nth-of-type(4) {
+    text-align: center;     /* tekst centreren */
+    gap: 1rem;              /* ruimte tussen items */
+  }
+
+  main section:nth-of-type(4) h2,
+  main section:nth-of-type(4) p,
+  main section:nth-of-type(4) a,
+  main section:nth-of-type(4) img {
+    margin: 0 auto; /* horizontaal centreren */
+  }
+
+  main section:nth-of-type(4) img {
+    max-width: 60vw; /* past zich aan schermbreedte aan */
+    height: auto;
+  }
+
+  main section:nth-of-type(4) p {
+    max-width: 60vw; /* past zich aan schermbreedte aan */
+    height: auto;
+  }
+
+  main section:nth-of-type(4) a {
+    margin-top: 1rem; /* ruimte boven de knop */
+  }
 }
 
 
@@ -667,6 +790,24 @@ main section:nth-of-type(5) ul::-webkit-scrollbar {
 /* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
 
 
+@media (min-width: 1000px) {
+  main section:nth-of-type(5) h2 {
+    text-align: center;
+    margin: 0 auto 1em auto;
+  }
+
+  main section:nth-of-type(5) ul {
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  main section:nth-of-type(5) ul::scroll-button(left),
+  main section:nth-of-type(5) ul::scroll-button(right) {
+    display: none;
+  }
+}
+
+
 
 /* Section 6 ontdek */
 /* //////////////// */
@@ -721,6 +862,26 @@ main section:nth-of-type(6) img {
   width: 9.5em;
 }
 
+@media (min-width: 768px) {
+  main section:nth-of-type(6) img {
+  width: 12em;
+}
+
+main section:nth-of-type(6) li {
+  width: 13em;
+}
+}
+
+@media (min-width: 1200px) {
+  main section:nth-of-type(6) img {
+  width: 14em;
+}
+
+main section:nth-of-type(6) li {
+  width: 15em;
+}
+}
+
 main section:nth-of-type(6) a {
   color: var(--text-color);
   text-transform: uppercase;
@@ -757,7 +918,7 @@ main section:nth-of-type(6) ul::-webkit-scrollbar {
 
 
 
-/* Section 8 nieuwsbrief */
+/* Section 7 nieuwsbrief */
 /* ///////////////////// */
 
 main section:nth-of-type(7) h2 {
@@ -802,7 +963,7 @@ main section:nth-of-type(7) input[type="email"] {
   background-color: var(--accent1);
   border: none;
   padding: 1em;
-  padding-right: 12em;
+  padding-right: 10em;
   color: var(--text-color);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -812,9 +973,7 @@ main section:nth-of-type(7) input[type="email"] {
 main section:nth-of-type(7) input[type="submit"] {
   background-color: var(--text-color);
   border: none;
-  padding: 0.7em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 0.7em 1em;
   color: var(--text-color2);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -823,27 +982,37 @@ main section:nth-of-type(7) input[type="submit"] {
   cursor: pointer;
 }
 
-main section:nth-of-type(7) input[type="checkbox"] {
+main section:nth-of-type(7) .checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
   order: 4;
-  cursor: pointer;
-  float: left;
-  margin-left: -27em;
-
+  max-width: 400px;
 }
 
-main section:nth-of-type(7) label {
-  order: 4;
+main section:nth-of-type(7) .checkbox-container input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+  border-color: var(--text-color);
+}
+
+main section:nth-of-type(7) .checkbox-container label {
+  margin: 0;
+  font-size: 0.7em;
+  font-weight: 600;
 }
 
 main section:nth-of-type(7) p {
   order: 5;
+  font-size: 0.7em;
+  max-width: 400px;
 }
 
 
 
 /*    footer nav    */
 
-/* Section 1 linkjes nav*/                         /* DETAIL SUMMARY */
+/* Section 1 linkjes nav*/
 /* //////////////////// */
 
 footer section:first-of-type h2 {
@@ -862,34 +1031,34 @@ footer section:first-of-type a {
 }
 
 footer section:first-of-type ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 0;
+  display: grid;
+  gap: 0.5em;
+  list-style: none;
+  padding: 0;
+  margin-left: 2.5em;
+  margin-bottom: 3em;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-footer section:first-of-type ul li {
-  flex: 1 1 200px;
-}
-
-footer section:first-of-type {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 0;
-  padding: 20px;
-}
-
-/* Vanaf tablet-scherm breedte ul’s naast elkaar */
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   footer section:first-of-type {
-    flex-direction: row; 
-    gap: 40px;           
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
   }
-  footer section:first-of-type ul {
-    flex: 1;              
+
+  footer section:first-of-type h2:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  footer section:first-of-type ul:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 2;
   }
 }
+
 
 
 /* Section 2 footer nav */
@@ -897,6 +1066,8 @@ footer section:first-of-type {
 
 footer section:last-of-type {
   background-color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 footer section:last-of-type h2 {
@@ -906,4 +1077,89 @@ footer section:last-of-type h2 {
 footer section:last-of-type p {
   color: var(--text-color2);
   text-align: center;
+  padding-bottom: 1em;
+}
+
+footer section:last-of-type details {
+  border-bottom: 1px solid #ccc;
+  padding: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  max-width: 25em;
+  display: block;
+  margin: 1em auto 0;
+}
+
+footer section:last-of-type details:first-of-type {
+  padding-top: 4em;
+}
+
+footer section:last-of-type summary {
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+}
+
+footer section:last-of-type details li {
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  margin-left: -1em;
+}
+
+footer section:last-of-type a {
+  font-family: "Noto Sans", sans-serif; 
+  text-decoration: none;
+  color: var(--text-color2);
+}
+
+footer section:last-of-type p {
+  font-family: "Noto Sans", sans-serif; 
+  font-weight: 300;
+  font-size: 0.8em;
+  margin: 5em;
+  color: var(--text-color2);
+}
+
+footer section:last-of-type p:first-of-type {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+footer section:last-of-type p:last-of-type {
+  color: var(--accent2);
+  margin-bottom: 1em;
+}
+
+footer section:last-of-type h2 {
+  margin-top: 3em;
+  font-weight: 400;
+}
+
+footer section:last-of-type img {
+  display: block;
+  margin: 0 auto;
+  height: 10em;
+}
+
+footer section:last-of-type > a {
+  display: block;
+  width: max-content;
+  margin: 1em auto 0;
+  text-align: center;
+  padding: 0;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
