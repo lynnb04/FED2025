@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Rood
 
   #### Je focus:
-  Surface-plane
+  Responsive
  
 </details>
 
@@ -229,6 +229,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
+  - sections op de homepagina, vooral week voor week ben ik trots op
+  - animaties vond ik leuk om te doen, had ik nog niet eerder gedaan
+  - ik heb veel meer gevoel gekregen voor responsive ontwerpen
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
@@ -237,6 +240,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   - nav categorieën uit de zijbalk in de horizontale balk krijgen
   - footer verder afwerken
+  - product pagina afkrijgen
 </details>
 
 
@@ -252,8 +256,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://www.w3schools.com/tags/tag_summary.asp
+  2. https://www.a11yproject.com/posts/how-to-hide-content/
+  3. https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
 
 </details>
