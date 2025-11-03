@@ -622,29 +622,29 @@ main section:nth-of-type(4) a:hover {
 
 @media (min-width: 800px) {
   main section:nth-of-type(4) {
-    text-align: center;     /* tekst centreren */
-    gap: 1rem;              /* ruimte tussen items */
+    text-align: center;
+    gap: 1rem;
   }
 
   main section:nth-of-type(4) h2,
   main section:nth-of-type(4) p,
   main section:nth-of-type(4) a,
   main section:nth-of-type(4) img {
-    margin: 0 auto; /* horizontaal centreren */
+    margin: 0 auto;
   }
 
   main section:nth-of-type(4) img {
-    max-width: 60vw; /* past zich aan schermbreedte aan */
+    max-width: 60vw;
     height: auto;
   }
 
   main section:nth-of-type(4) p {
-    max-width: 60vw; /* past zich aan schermbreedte aan */
+    max-width: 60vw;
     height: auto;
   }
 
   main section:nth-of-type(4) a {
-    margin-top: 1rem; /* ruimte boven de knop */
+    margin-top: 1rem;
   }
 }
 
