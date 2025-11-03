@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Rood
 
   #### Je focus:
-  Responsive
+  Surface-plane
  
 </details>
 
@@ -100,12 +100,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### de hele pagina: 
   Link naar mijn breakdownschets: https://www.figma.com/design/6YSGkkIzKDlvcGJbcXbe9Z/Untitled?node-id=0-1&t=Mifgq6CwaZ34clkN-1
-
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -212,10 +206,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - svg gefixt
+  - voorbeelden voor carousel en zoekbalk doorgenomen, kan ik gebruiken in mijn site
 
 </details>
 
@@ -242,6 +234,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Korte omschrijving met plaatjes
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+
+  - nav categorieën uit de zijbalk in de horizontale balk krijgen
+  - footer verder afwerken
 </details>
 
 
