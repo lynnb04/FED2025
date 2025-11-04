@@ -170,6 +170,25 @@ nav ul:nth-of-type(2) li {
   border-bottom: 1px solid #ccc;
 }
 
+@media (width > 768px) {
+  nav {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+  nav ul:nth-of-type(2) {
+    position:static;
+    transform: none;
+    flex-direction: row;
+    width: unset;
+    height: unset;
+    padding: 0;
+    order: -1;
+  }
+  li:has(button[aria-label="toggle menu"]) {
+    display: none;
+  }
+}
 
 
 /* Nav bar */
@@ -187,6 +206,7 @@ nav ul:first-of-type {
   margin: 0.7em;
   z-index: 10;
   }
+
 
 nav ul:first-of-type li:nth-child(2) {
   margin-right: auto;
@@ -234,14 +254,24 @@ input:focus {
 
 @media (min-width: 768px) {
   input[type="search"] {
-    width: 20em;
+    width: 100%;
     background-color: var(--accent2);
+  }
+  li:has(input[type="search"]) {
+    flex-grow: 1;
+    max-width: 20em;
+  }
+  nav ul:nth-of-type(1) {
+    display: contents;
+  }
+  nav ul:nth-of-type(1) li:nth-of-type(2) {
+    order: -2;
   }
 }
 
 @media (min-width: 1200px) {
   input[type="search"] {
-    width: 40em;
+    width: 100%;
     background-color: var(--accent2);
   }
 }
@@ -1000,6 +1030,9 @@ main section:nth-of-type(7) .checkbox-container label {
   margin: 0;
   font-size: 0.7em;
   font-weight: 600;
+  display: flex;
+  align-items: start;
+  gap: 1em;
 }
 
 main section:nth-of-type(7) p {
