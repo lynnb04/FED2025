@@ -2,19 +2,31 @@
 /* ///////////////// */
 
 :root {
+  --title-color: #fffef9;
   --text-color: #504239;
   --text-color2: #fffef9;
   --background-color: #fffef9;
   --accent1: #faf7f1;
   --accent2: #f2eee2;
+  --accent3: #faf7f1;
+  --accent4: #504239;
+  --footer: #504239;
+  --header: #fffef9;
 }
 
-:root[data-theme="dark"] {
-  --text-color: #f3eadf;      /* light warm text */
-  --text-color2: #2a241f;     /* deep warm text for inverted areas */
-  --background-color: #1a1613;/* main dark background */
-  --accent1: #24201c;         /* subtle surface 1 */
-  --accent2: #2e2924;         /* subtle surface 2 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --title-color: #fffef9;
+    --text-color: #f5efe8;
+    --text-color2: #1c1816;
+    --background-color: #13100e; 
+    --accent1: #504239;
+    --accent2: #262220;
+    --accent3: #faf7f1;
+    --accent4: #504239;
+    --footer: #504239;
+    --header: #13100e;
+  }
 }
 
 
