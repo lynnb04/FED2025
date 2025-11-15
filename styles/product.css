@@ -1,90 +1,5 @@
-/* Custom properties */
-/* ///////////////// */
-
-:root {
-  --text-color: #504239;
-  --text-color2: #fffef9;
-  --background-color: #fffef9;
-  --accent1: #faf7f1;
-  --accent2: #f2eee2;
-}
-
-
-
-/* Global */
+/* Header */
 /* ////// */
-
-body {
-  background-color: var(--background-color);
-  color: var(--background-color);
-  margin: 0;
-  padding: 0;
-}
-
-
-
-/* Fonts, tekst deco */
-/* ///////////////// */
-
-/* h1 {
-    ...
-} =hidden, maakt niet uit */
-
-h2 {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-family: "Noto Sans", sans-serif;
-}
-
-p {
-  font-family: "Noto Sans", sans-serif;
-}
-
-button {
-  font-family: "Montserrat", sans-serif;
-}
-
-a {
-  font-family: "Noto Sans", sans-serif;
-}
-
-label {
-  font-family: "Noto Sans", sans-serif;
-  font-size: small;
-}
-
-main section:first-of-type p:first-of-type {
-  font-family: "Dancing Script", cursive;
-}
-
-main section:nth-of-type(4) p:first-of-type {
-  font-family: "Dancing Script", cursive;
-}
-
-h2, h3, p, button, label {
-  color: var(--text-color);
-}
-
-
-
-/* Visually hidden */
-/* /////////////// */
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-/* Bron = https://www.a11yproject.com/posts/how-to-hide-content/ */
-
 
 /* Hamburgermenu */
 
@@ -94,7 +9,7 @@ button[aria-label="toggle menu"] {
   width:1em;
   aspect-ratio:1;
   border:none;
-  background:#fffef9;
+  background: var(--header);
   display:grid;
   align-content:center;
   scale: 0.9;
@@ -105,7 +20,7 @@ button[aria-label="toggle menu"] span {
   display:block;
   width:1.2em;
   height:.1em;
-  background-color:#504239;
+  background-color: var(--text-color);
   border-radius:.1em;
   grid-column-start:1;
   grid-row-start:1;
@@ -147,7 +62,11 @@ nav ul:nth-of-type(2) {
   left: 0;
   height: 100vh;
   width: 20em;
-  background: var(--background-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  background: var(--header);
   color: var(--text-color);
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   list-style: none;
@@ -168,8 +87,34 @@ header nav:has(ul:first-of-type button[aria-expanded="true"]) > ul:nth-of-type(2
 nav ul:nth-of-type(2) li {
   padding: 0.5rem 0;
   border-bottom: 1px solid #ccc;
+  cursor: pointer;
 }
 
+@media (width > 1000px) {
+  nav {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin: 1em;
+  }
+  nav ul:nth-of-type(2) {
+    position:static;
+    transform: none;
+    flex-direction: row;
+    width: unset;
+    height: unset;
+    padding: 0;
+    order: -1;
+    box-shadow: none;
+  }
+  li:has(button[aria-label="toggle menu"]) {
+    display: none;
+  }
+  nav ul:nth-of-type(2) li {
+  padding: 0.5rem 0;
+  border-bottom: none;
+}
+}
 
 /* Nav bar */
 
@@ -186,6 +131,7 @@ nav ul:first-of-type {
   margin: 0.7em;
   z-index: 10;
   }
+
 
 nav ul:first-of-type li:nth-child(2) {
   margin-right: auto;
@@ -231,16 +177,29 @@ input:focus {
   outline: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   input[type="search"] {
-    width: 20em;
+    width: 100%;
     background-color: var(--accent2);
   }
+  li:has(input[type="search"]) {
+    flex-grow: 1;
+    max-width: 20em;
+  }
+  nav ul:nth-of-type(1) {
+    display: contents;
+  }
+  nav ul:nth-of-type(1) li:nth-of-type(2) {
+    order: -2;
+  }
+  nav ul:first-of-type li:nth-child(2) {
+  margin-left: 0;
+}
 }
 
 @media (min-width: 1200px) {
   input[type="search"] {
-    width: 40em;
+    width: 100%;
     background-color: var(--accent2);
   }
 }
@@ -272,7 +231,7 @@ main section:first-of-type button {
 
 main section:first-of-type img {
   height: 40em;
-  max-width: 100%;
+  max-width: fit-content;
   object-fit: cover;
 }
 
@@ -291,6 +250,70 @@ main section:first-of-type button {
 main section:first-of-type button:hover {
   transform: scale(1.05);
 }
+
+main section:first-of-type ul {
+  display: flex;
+  flex-direction: row;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+
+  width: 100vw;
+  height: 80vh;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  anchor-name: --carousel;
+}
+
+main section:first-of-type ul {
+  &::scroll-button(*) {
+    position-visibility: always;
+    height: 3em;
+    width: 3em;
+    display: grid;
+    place-items: center;
+    background: var(--background-color);
+    border-radius: 5%;
+    margin: 1em;
+    cursor: pointer;
+    position-area: bottom center;
+  }
+
+  &::scroll-button(left) {
+    content: '←';
+    position-area: center left;
+    translate: -3em -0.8em;
+  }
+
+  &::scroll-button(right) {
+    content: '→';
+    position-area: center right;
+    translate: 3em -7em;
+  }
+}
+/* bron: carousel voortgangsgesprek 3 */
+
+main section:first-of-type ul::-webkit-scrollbar {
+  display: none;
+}
+
+main section:first-of-type li {
+	flex: 0 0 100vw; /* elke slide = 100% viewport breedte */
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+main section:first-of-type img {
+  width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 
 /* Section 2 ook interessant voor u */
@@ -527,7 +550,6 @@ footer section:first-of-type ul {
 }
 
 
-
 /*    footer nav    */
 
 /* Section 1 linkjes nav*/
@@ -564,6 +586,8 @@ footer section:first-of-type ul {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     align-items: start;
+    margin-left: 8em;
+    margin-right: 5em;
   }
 
   footer section:first-of-type h2:nth-of-type(1) {
@@ -583,17 +607,17 @@ footer section:first-of-type ul {
 /* //////////////////// */
 
 footer section:last-of-type {
-  background-color: var(--text-color);
+  background-color: var(--footer);
   margin: 0;
   padding: 0;
 }
 
 footer section:last-of-type h2 {
-  color: var(--text-color2);
+  color: var(--title-color);
 }
 
 footer section:last-of-type p {
-  color: var(--text-color2);
+  color: var(--title-color);
   text-align: center;
   padding-bottom: 1em;
 }
@@ -616,6 +640,7 @@ footer section:last-of-type summary {
   cursor: pointer;
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
+  color: var(--title-color);
 }
 
 footer section:last-of-type details li {
@@ -628,7 +653,7 @@ footer section:last-of-type details li {
 footer section:last-of-type a {
   font-family: "Noto Sans", sans-serif; 
   text-decoration: none;
-  color: var(--text-color2);
+  color: var(--title-color);
 }
 
 footer section:last-of-type p {
@@ -636,7 +661,7 @@ footer section:last-of-type p {
   font-weight: 300;
   font-size: 0.8em;
   margin: 5em;
-  color: var(--text-color2);
+  color: var(--title-color);
 }
 
 footer section:last-of-type p:first-of-type {
@@ -645,7 +670,7 @@ footer section:last-of-type p:first-of-type {
 }
 
 footer section:last-of-type p:last-of-type {
-  color: var(--accent2);
+  color: var(--title-color);
   margin-bottom: 1em;
 }
 
