@@ -99,10 +99,15 @@ nav ul:nth-of-type(2) li {
     height: unset;
     padding: 0;
     order: -1;
+    box-shadow: none;
   }
   li:has(button[aria-label="toggle menu"]) {
     display: none;
   }
+  nav ul:nth-of-type(2) li {
+  padding: 0.5rem 0;
+  border-bottom: none;
+}
 }
 
 
@@ -1026,11 +1031,11 @@ footer section:last-of-type {
 }
 
 footer section:last-of-type h2 {
-  color: var(--text-color2);
+  color: var(--title-color);
 }
 
 footer section:last-of-type p {
-  color: var(--text-color2);
+  color: var(--title-color);
   text-align: center;
   padding-bottom: 1em;
 }
@@ -1053,6 +1058,7 @@ footer section:last-of-type summary {
   cursor: pointer;
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
+  color: var(--title-color);
 }
 
 footer section:last-of-type details li {
@@ -1065,7 +1071,7 @@ footer section:last-of-type details li {
 footer section:last-of-type a {
   font-family: "Noto Sans", sans-serif; 
   text-decoration: none;
-  color: var(--text-color2);
+  color: var(--title-color);
 }
 
 footer section:last-of-type p {
@@ -1073,7 +1079,7 @@ footer section:last-of-type p {
   font-weight: 300;
   font-size: 0.8em;
   margin: 5em;
-  color: var(--text-color2);
+  color: var(--title-color);
 }
 
 footer section:last-of-type p:first-of-type {
@@ -1082,7 +1088,7 @@ footer section:last-of-type p:first-of-type {
 }
 
 footer section:last-of-type p:last-of-type {
-  color: var(--accent2);
+  color: var(--title-color);
   margin-bottom: 1em;
 }
 
