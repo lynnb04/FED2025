@@ -1,0 +1,93 @@
+/* Custom properties */
+/* ///////////////// */
+
+:root {
+  --text-color: #504239;
+  --text-color2: #fffef9;
+  --background-color: #fffef9;
+  --accent1: #faf7f1;
+  --accent2: #f2eee2;
+}
+
+:root[data-theme="dark"] {
+  --text-color: #f3eadf;      /* light warm text */
+  --text-color2: #2a241f;     /* deep warm text for inverted areas */
+  --background-color: #1a1613;/* main dark background */
+  --accent1: #24201c;         /* subtle surface 1 */
+  --accent2: #2e2924;         /* subtle surface 2 */
+}
+
+
+/* Body */
+/* ////// */
+
+body {
+  background-color: var(--background-color);
+  color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Fonts, tekst deco */
+/* ///////////////// */
+
+/* h1 {
+    ...
+} =hidden, maakt niet uit */
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Noto Sans", sans-serif;
+}
+
+p {
+  font-family: "Noto Sans", sans-serif;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  font-family: "Noto Sans", sans-serif;
+}
+
+label {
+  font-family: "Noto Sans", sans-serif;
+  font-size: small;
+}
+
+main section:first-of-type p:first-of-type {
+  font-family: "Dancing Script", cursive;
+}
+
+main section:nth-of-type(4) p:first-of-type {
+  font-family: "Dancing Script", cursive;
+}
+
+h2, h3, p, button, label {
+  color: var(--text-color);
+}
+
+
+
+/* Visually hidden */
+/* /////////////// */
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* Bron = https://www.a11yproject.com/posts/how-to-hide-content/ */
