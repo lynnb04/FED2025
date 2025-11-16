@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Rood
 
   #### Je focus:
-  Responsive
+  Surface plane
  
 </details>
 
@@ -179,7 +179,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
-
+[FED 25-26 - Blok 1 - WCAG checklist.pdf](https://github.com/user-attachments/files/23566725/FED.25-26.-.Blok.1.-.WCAG.checklist.pdf)
+logische volgorde, overal alt tekst, light/dark mode was er eerst niet
 </details>
 
 
@@ -221,13 +222,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+<img width="769" height="1259" alt="uitkomst opdracht 1" src="https://github.com/user-attachments/assets/74c09b4a-86ba-4fa5-9ff9-8cf5740ef331" />
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+<img width="772" height="1239" alt="section 2 en 3" src="https://github.com/user-attachments/assets/d6c718a2-2aa7-4daf-8ed5-bf1b9d571086" />
 
   - sections op de homepagina, vooral week voor week ben ik trots op
   - animaties vond ik leuk om te doen, had ik nog niet eerder gedaan
@@ -235,12 +236,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
+<img width="1922" height="94" alt="image" src="https://github.com/user-attachments/assets/3594f4cd-f32f-4d8b-b03e-925e563706b7" />
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 
-  - nav categorieën uit de zijbalk in de horizontale balk krijgen
-  - footer verder afwerken
-  - product pagina afkrijgen
+  - ik had wat hulp nodig om de nav categorieën uit de zijbalk in de horizontale balk krijgen
 </details>
 
 
