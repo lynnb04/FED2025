@@ -207,6 +207,7 @@ input:focus {
 
 /* Section 1 productinfo */
 /* ///////////////////// */
+
 main section:first-of-type {
   display: flex;
   flex-direction: column;
@@ -220,13 +221,93 @@ main section:first-of-type {
 main section:first-of-type h2,
 main section:first-of-type p {
   align-self: flex-start;
-  text-align: start;
+  text-align: center;
   width: 100%;
+}
+
+main section:first-of-type p {
+  font-family: "Noto Sans", sans-serif;
+  margin-top: -1.5em;
+  font-weight: 300;
+  transform: translateX(-150px);
+}
+
+main section:first-of-type a {
+  display: inline-flex;
+  gap: .7em;
+  font-family: "Noto Sans", sans-serif;
+  color: var(--text-color);
+  font-weight: 500;
+  transform: translateX(-50px);
+  text-decoration: underline;
+}
+
+main section:first-of-type a::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 75.82 69.54'><path fill='%23504239' d='M75.82 19.73v-.18a2.6 2.6 0 0 0 0-.26 2.1 2.1 0 0 0-.06-.24 1.72 1.72 0 0 0-.07-.21 2.1 2.1 0 0 0-.13-.26s0-.1-.07-.14a102.4 102.4 0 0 1-8.8-16.92A2.39 2.39 0 0 0 64.14 0a2.3 2.3 0 0 0-.26 0L13 .58a2.41 2.41 0 0 0-2 1C7 7.54 3.07 13.71.31 18.56v.08a3.38 3.38 0 0 0-.18.44v.1a2.62 2.62 0 0 0-.07.57c0 1.63.05 4.23.07 6.85s0 5.48.08 7.18a2.39 2.39 0 0 0 2.4 2.36h.08c1.7-.06 3.4-.1 5.11-.15.15 5.81.3 10.52.45 15.22.15 4.89.31 9.78.47 15.93A2.4 2.4 0 0 0 11 69.51h10.09c15.83 0 31.77-.24 47.51-.74A2.4 2.4 0 0 0 71 66.5a119.2 119.2 0 0 0-.56-15.42A98.22 98.22 0 0 1 70 35.92l3 .08h.07a2.41 2.41 0 0 0 2.4-2.33v-.13a2.44 2.44 0 0 0 .33-1.19zM14.29 5.36l48.51-.55A103.62 103.62 0 0 0 69 17.17H6.7c2.21-3.66 4.85-7.77 7.59-11.81zM4.87 26.58v-5.71H71v10.27a1112 1112 0 0 0-66.1.15l-.03-4.71zm39.41 18.77c3.32-.48 7.27-.11 10.62-.05a111.67 111.67 0 0 1 .32 19c-3.19.07-7-.45-10.15-.4zm22 6.13a124.66 124.66 0 0 1 .6 12.59c-2.06.06-4.75.11-6.82.16a116.48 116.48 0 0 0-.59-21.53 2.4 2.4 0 0 0-2.25-2.11 64.6 64.6 0 0 0-14.37.8 3.14 3.14 0 0 0-2.85 3.5l.83 19.72c-9.16.12-19 .16-28.1.11-.14-5.1-.27-9.36-.41-13.64-.15-4.69.36-9.39.21-15.2 17.5-.45 35.75-.47 53.25-.08a104.77 104.77 0 0 0 .47 15.68z'/><path fill='%23504239' d='M29.39 41.49c-.46 0-1.06-.08-1.74-.15-3.78-.37-7.08-.56-9.09.9-2.42 1.76-1.85 5.47-1.38 8.46.08.54.16 1 .19 1.36A2.73 2.73 0 0 0 20 54.7c2.24.17 4.5.25 6.75.25 1.18 0 2.36 0 3.53-.07s1.55-.83 1.51-2.14a57.71 57.71 0 0 0-.94-9c-.19-1.08-.34-2.21-1.46-2.25zm-7.24 10.23-2.39.17 2.39-.17zm-.22-1.23v-.05A22.92 22.92 0 0 1 21.6 46c1.15-.35 4.32 0 5.58.09h.06c.2 1.34.35 3.16.45 4.5-1.92.05-3.84.01-5.76-.1z'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main section:first-of-type a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main section:first-of-type h2 {
+  font-size: 1.3em;
+  transform: translateX(-55px);
+}
+
+main section:first-of-type p:nth-of-type(2) {
+  margin-top: 1em;
+  font-weight: 500;
+  font-size: 1.3em;
+  transform: translateX(-140px);
 }
 
 main section:first-of-type img,
 main section:first-of-type button {
   align-self: center;
+}
+
+main section:first-of-type button:first-of-type {
+  translate: 18em -13em;
+  width: 4em;
+  height: 4em;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 2px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section:first-of-type button:first-of-type:hover {
+  transform: scale(1.1);
+  border: none;
+  background-color: var(--background-color);
+}
+
+main section:first-of-type button:first-of-type svg {
+  width: 3em;
+  height: 3em;
+  padding: 0;
+  margin-top: 0.7em;
+  margin-left: 0.7em;
+}
+
+main section:first-of-type button:nth-of-type(2) {
+  font-size: 1.1em;
+  margin-top: -9em;
 }
 
 main section:first-of-type img {
@@ -248,7 +329,9 @@ main section:first-of-type button {
 }
 
 main section:first-of-type button:hover {
-  transform: scale(1.05);
+  background-color: var(--accent1);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
 }
 
 main section:first-of-type ul {
@@ -276,7 +359,7 @@ main section:first-of-type ul {
     width: 3em;
     display: grid;
     place-items: center;
-    background: var(--background-color);
+    background: var(--accent3);
     border-radius: 5%;
     margin: 1em;
     cursor: pointer;
@@ -302,7 +385,7 @@ main section:first-of-type ul::-webkit-scrollbar {
 }
 
 main section:first-of-type li {
-	flex: 0 0 100vw; /* elke slide = 100% viewport breedte */
+	flex: 0 0 100vw;
   height: 100%;
   scroll-snap-align: start;
 }
@@ -316,10 +399,70 @@ main section:first-of-type img {
 
 
 
-/* Section 2 ook interessant voor u */
+/* Section 2 bezorging */
+/* /////////////////// */
+
+main section:nth-of-type(2) {
+  background-color: var(--accent3);
+  padding-left: 30%;
+  margin-top: 1em;
+}
+
+main section:nth-of-type(2) p {
+  display: inline-flex;
+  gap: .7em;
+  font-family: "Noto Sans", sans-serif;
+  color: var(--text-color);
+  font-weight: 500;
+  transform: translateX(-50px);
+}
+
+main section:nth-of-type(2) p:first-of-type::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("https://contenthub-media.sostrenegrene.com/cdn-cgi/image/width=40,format=webp/media/35bl55f4/png-calender-time.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main section:nth-of-type(2) p:nth-of-type(2)::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("https://contenthub-media.sostrenegrene.com/cdn-cgi/image/width=40,format=webp/media/vznjos35/png_delivery.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main section:nth-of-type(2) p:nth-of-type(3)::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("https://contenthub-media.sostrenegrene.com/cdn-cgi/image/width=40,format=webp/media/4ubcuavt/png_news.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (prefers-color-scheme: dark) {
+  main section:nth-of-type(2) p {
+    color: var(--accent4);
+  }
+} 
+
+@media (min-width: 900px) {
+ 
+}
+
+
+
+/* Section 3 ook interessant voor u */
 /* //////////////////////////////// */
 
-main section:nth-of-type(2) h2 {
+main section:nth-of-type(3) h2 {
   anchor-name: --heading;
   color: var(--text-color);
   font-size: 1rem;
@@ -330,7 +473,7 @@ main section:nth-of-type(2) h2 {
   order: 2;
 }
 
-main section:nth-of-type(2) ul {
+main section:nth-of-type(3) ul {
   display: flex;
   gap: 20px;
   padding: 1em;
@@ -343,7 +486,7 @@ main section:nth-of-type(2) ul {
   anchor-name: --carousel;
 }
 
-main section:nth-of-type(2) ul {
+main section:nth-of-type(3) ul {
   &::scroll-button(*) {
     position: fixed;
     position-anchor: --heading;
@@ -378,7 +521,7 @@ main section:nth-of-type(2) ul {
 }
 /* bron: carousel voortgangsgesprek 3, product cards ervan gemaakt */
 
-main section:nth-of-type(2) li {
+main section:nth-of-type(3) li {
 	width: 14.5em;
 	height: auto;
 	
@@ -387,14 +530,14 @@ main section:nth-of-type(2) li {
 	scroll-snap-align: center;
 }
 
-main section:nth-of-type(2) img {
+main section:nth-of-type(3) img {
   width: 100%;
   order: 1;
 }
 
 /* product cards */
 
-main section:nth-of-type(2) a {
+main section:nth-of-type(3) a {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto auto;
@@ -409,7 +552,7 @@ main section:nth-of-type(2) a {
   gap: 0;
 }
 
-main section:nth-of-type(2) a img {
+main section:nth-of-type(3) a img {
   grid-area: img;
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -417,7 +560,7 @@ main section:nth-of-type(2) a img {
   border-radius: 2px;
 }
 
-main section:nth-of-type(2) a h3 {
+main section:nth-of-type(3) a h3 {
   grid-area: h3;
   font-size: 0.8rem;
   font-family: "Montserrat", sans-serif;
@@ -425,7 +568,7 @@ main section:nth-of-type(2) a h3 {
   margin: 1em 0 0;
 }
 
-main section:nth-of-type(2) a p {
+main section:nth-of-type(3) a p {
   grid-area: p;
   font-size: 0.7rem;
   font-family: "Noto Sans", sans-serif;
@@ -436,7 +579,7 @@ main section:nth-of-type(2) a p {
 
 /* winkelmand button */
 
-main section:nth-of-type(2) a button:nth-of-type(2) {
+main section:nth-of-type(3) a button:nth-of-type(2) {
   grid-area: button2;
   justify-self: end;
   align-self: center;
@@ -448,18 +591,18 @@ main section:nth-of-type(2) a button:nth-of-type(2) {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-main section:nth-of-type(2) a button:nth-of-type(2):hover {
+main section:nth-of-type(3) a button:nth-of-type(2):hover {
   transform: scale(1.2);
 }
 
 /* like button */
 
-main section:nth-of-type(2) a button:first-of-type {
+main section:nth-of-type(3) a button:first-of-type {
   position: absolute;
   top: 1em;
   right: 1em;
   place-items: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--accent1);
   border: none;
   border-radius: 2px;
   padding-top: 0.8em;
@@ -468,34 +611,33 @@ main section:nth-of-type(2) a button:first-of-type {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-main section:nth-of-type(2) a button:first-of-type:hover {
-  background: #fff;
+main section:nth-of-type(3) a button:first-of-type:hover {
   transform: scale(1.1);
 }
 
-main section:nth-of-type(2) ul::-webkit-scrollbar {
+main section:nth-of-type(3) ul::-webkit-scrollbar {
   display: none;
 }
 /* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
 
 
 @media (min-width: 1200px) {
-  main section:nth-of-type(2) h2 {
+  main section:nth-of-type(3) h2 {
     text-align: center;
     margin: 3em auto 1em auto;
   }
 
-  main section:nth-of-type(2) ul {
+  main section:nth-of-type(3) ul {
     justify-content: center;
     gap: 1.5em;
   }
 
-  main section:nth-of-type(2) ul::scroll-button(left),
-  main section:nth-of-type(2) ul::scroll-button(right) {
+  main section:nth-of-type(3) ul::scroll-button(left),
+  main section:nth-of-type(3) ul::scroll-button(right) {
     display: none;
   }
 
-  main section:nth-of-type(2) li {
+  main section:nth-of-type(3) li {
     width: 18em;
   }
 }
